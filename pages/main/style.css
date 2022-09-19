@@ -8,13 +8,6 @@
   --white: #ffffff;
   --black: #111318;
   --light-grey: #e7e9ee;
-  --header-height: 60px;
-  --footer-height: 60px;
-  --font2: 40px;
-  --font3: 28px;
-  --font4: 24px;
-  --font5: 20px;
-  --font6: 18px;
 }
 
 html {
@@ -27,6 +20,7 @@ a {
 }
 
 button {
+  border: 0;
   cursor: pointer;
 }
 
@@ -149,8 +143,6 @@ body {
   border-width: 2px 0px;
   overflow: hidden;
 }
-
-
 
 .footer {
   display: flex;
