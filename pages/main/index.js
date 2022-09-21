@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', function () {
   const topTitle = document.querySelector('.main-title.first');
   const bottomTitle = document.querySelector('.main-title.second');
   const logo = document.querySelector('.logo');
+  const borders = document.querySelectorAll('.border');
   const mediaLinks = document.querySelector('.links');
   const year = document.querySelector('.year');
   const button = document.querySelector('.connect-button');
@@ -13,9 +14,14 @@ window.addEventListener('DOMContentLoaded', function () {
   const asideTitle = document.querySelector('.to-domain-title');
   const asideButton = document.querySelector('.to-domain-button');
   TweenMax.staggerTo([hand, topTitle, bottomTitle], 0.5, {
+    ease: 'easeIn',
     top: 0,
-    stagger: 0.1,
+    stagger: 0.6,
   })
+    .to(borders, 0.5, {
+      width: '100%',
+      delay: 0.1
+    })
     .to([logo, mediaLinks], 0.5, {
       top: 0,
       delay: 0.1
@@ -32,10 +38,11 @@ window.addEventListener('DOMContentLoaded', function () {
       right: 0,
       width: '144px',
       overflow: 'visible',
+      delay: 0.4,
     })
     .staggerFrom([asideInsuline, asideTitle, asideButton], 0.5, {
       top: '-104px',
-      stagger: 0.1,
+      stagger: 0.6,
     })
 });
 
