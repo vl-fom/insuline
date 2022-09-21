@@ -125,6 +125,35 @@ body {
   left: 90px;
 }
 
+@media (max-width: 1100px) {
+
+  .hand {
+    width: 75px;
+  }
+
+  .main-title {
+    font-size: 70px;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .main-text-wrapper > .wrapper {
+    height: 75px;
+  }
+
+  .hand {
+    width: 60px;
+  }
+
+  .main-title {
+    font-size: 50px;
+    line-height: 70px;
+  }
+
+}
+
 .running-line {
   margin: 0 32px 0 64px;
   font-size: 72px;
