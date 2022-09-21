@@ -49,13 +49,16 @@ function initMarquee(time) {
   const gap = parseFloat(window.getComputedStyle(marqueeElements[0].parentNode).gap);
   let shift = 0;
 
-  gsap.set(marqueeElements, {
+  TweenMax.set(marqueeElements, {
     visibility: 'visible',
     x: (i) => {
       return marqueeElements[i - 1]
         ? shift += (marqueeElements[i - 1].offsetWidth) + gap
         : shift += lengthOfLastMarqueeElement + gap;
     }
+  })
+  TweenMax.set(marqueeElements, {
+    x: '+=310', // 310, чтобы wellness был возле левого края
   });
 
   gsap.to(marqueeElements, {
