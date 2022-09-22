@@ -21,27 +21,27 @@ function animateMainPage() {
   TweenMax.staggerTo([hand, topTitle, bottomTitle], 0.5, {
     ease: 'power1.inOut',
     top: 0,
-    stagger: 0.6,
+    stagger: 0.1,
   })
     .to(borders, 0.5, {
       ease: 'power1.inOut',
       width: '100%',
-      delay: 0.1,
+      delay: -0.4,
     })
     .to([logo, mediaLinks], 0.5, {
       ease: 'power1.inOut',
       top: 0,
-      delay: 0.1,
+      delay: -0.4,
     })
     .to(year, 0.5, {
       ease: 'power1.inOut',
       top: 0,
-      delay: 0.1,
+      delay: -0.4,
     })
     .to([button, designText], 0.5, {
       ease: 'power1.inOut',
       top: 0,
-      delay: 0.1,
+      delay: -0.4,
     })
     .to(asideWrapper, 0.5, {
       ease: 'power1.inOut',
@@ -62,37 +62,28 @@ function leavingFromMain() {
   const topTitle = document.querySelector('.main-title.first');
   const bottomTitle = document.querySelector('.main-title.second');
   const logo = document.querySelector('.logo');
-  const borders = document.querySelectorAll('.border');
   const mediaLinks = document.querySelector('.links');
   const year = document.querySelector('.year');
   const button = document.querySelector('.connect-button');
   const designText = document.querySelector('.design');
-  const asideWrapper = document.querySelector('.body > .wrapper');
+  const aside = document.querySelector('.to-domain');
   const asideInsuline = document.querySelector('.to-domain-insuline-title');
   const asideTitle = document.querySelector('.to-domain-title');
   const asideButton = document.querySelector('.to-domain-button');
-  TweenMax.staggerTo([hand, topTitle, bottomTitle], 0.5, {
-    ease: 'power1.inOut',
-    top: 0,
-    stagger: 0.6,
-  })
+  gsap.set(aside, {
+    right: 0,
+    zIndex: 1,
+  });
 
   TweenMax.staggerTo([asideInsuline, asideTitle, asideButton], 0.5, {
-    ease: 'power1.inOut',
-    top: '-104px',
-    stagger: 0.6,
-  })
-    // .from(asideWrapper, 0.5, {
-    //   ease: 'power1.inOut',
-    //   right: 0,
-    //   width: '144px',
-    //   overflow: 'visible',
-    //   delay: 0.4,
-    // })
+      ease: 'power1.inOut',
+      top: '-104px',
+      stagger: 0.1,
+    })
     .to(button, 0.5, {
       ease: 'power1.inOut',
       top: -48,
-      delay: 0.1,
+      delay: -0.2,
     })
     .to(designText, 0.5, {
       ease: 'power1.inOut',
@@ -102,7 +93,7 @@ function leavingFromMain() {
     .to(year, 0.5, {
       ease: 'power1.inOut',
       top: 40,
-      delay: 0.1,
+      delay: -0.4,
     })
     .to(mediaLinks, 0.5, {
       ease: 'power1.inOut',
@@ -112,8 +103,19 @@ function leavingFromMain() {
     .to(logo, 0.5, {
       ease: 'power1.inOut',
       top: -48,
+      delay: -0.4,
+    })
+    .staggerTo([hand, topTitle, bottomTitle], 0.5, {
+      ease: 'power1.inOut',
+      top: 100,
+      stagger: 0.1,
       delay: 0.1,
     })
+    .to(aside, 2.2, {
+      width: '100vw',
+      delay: -1.5,
+      ease: 'power1.inOut',
+    });
 }
 
 function initMarquee(time) {
