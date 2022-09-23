@@ -63,7 +63,6 @@ function animateDomainPage() {
     .to(bordersL, 0.15, {
       ease: 'none',
       height: 'calc(100% - 32px)',
-      delay: -0.4,
     })
     .set(cornersLT, {
       borderTop: '1px solid var(--dark-grey)',
@@ -102,15 +101,16 @@ function animateDomainPage() {
       delay: -0.45,
     })
     .to([memberBlock, nftName, nftDomain, etheriumQuantity, etheriumImage], 1.49, {
-      ease: 'power1.inOut',
+      ease: 'power2.inOut',
       top: 0,
       delay: -0.45,
     })
     .from(earth, 1.5, {
+      ease: 'power2.inOut',
       bottom: -150,
       delay: -1.5,
     })
-    .to(earth, 1.5, {
+    .to(earth, 10.5, {
       display: 'block',
       delay: -1.5,
     });

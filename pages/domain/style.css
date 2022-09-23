@@ -11,6 +11,7 @@
   --light-black: #191a1f;
   --dark-grey: #272930;
   --grey: #424652;
+  --grey2: #b9bdc5;
   --light-grey: #e7e9ee;
 }
 
@@ -142,6 +143,10 @@ body {
   width: 156px;
   height: 48px;
   border-radius: 24px;
+}
+
+.connect-button:hover {
+  background-color: var(--grey2);
 }
 
 .main-page {

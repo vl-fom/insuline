@@ -111,7 +111,7 @@ function leavingFromMain() {
       stagger: 0.1,
       delay: 0.1,
     })
-    .to(aside, 2.2, {
+    .to(aside, 1.5, {
       width: '100vw',
       delay: -1.5,
       ease: 'power1.inOut',

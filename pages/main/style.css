@@ -8,6 +8,7 @@
   --white: #ffffff;
   --black: #111318;
   --light-grey: #e7e9ee;
+  --grey2: #b9bdc5;
 }
 
 html {
@@ -86,6 +87,10 @@ body {
   width: 156px;
   height: 48px;
   border-radius: 24px;
+}
+
+.connect-button:hover {
+  background-color: var(--grey2);
 }
 
 .main-page {
