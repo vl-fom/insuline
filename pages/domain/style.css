@@ -33,6 +33,7 @@ button {
 }
 
 body {
+  position: relative;
   display: flex;
   flex-direction: row;
   height: auto;
@@ -41,14 +42,29 @@ body {
   color: var(--white);
   background-color: var(--black);
   font-family: 'Cabinet Grotesk', sans-serif;
+  overflow-x: clip;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.aside-wrapper {
+  width: 150px;
 }
 
 .to-main {
+  position: absolute;
+  top: 0;
+  left: -150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 144px;
+  width: 150px;
+  height: 100%;
   background-color: var(--light-black);
 }
 
@@ -57,16 +73,27 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 150px;
+  height: 64px;
   transform: rotate(90deg);
+  overflow-x: clip;
+}
+
+.to-main-title,
+.to-main-button {
+  position: absolute;
 }
 
 .to-main-title {
-  margin-right: 24px;
+  top: 14.5px;
+  left: 0;
   font-size: 28px;
   font-weight: 400;
 }
 
 .to-main-button {
+  top: 0;
+  right: 0;
   width: 64px;
   height: 64px;
   color: var(--white);
@@ -75,28 +102,43 @@ body {
   border-radius: 32px;
 }
 
+.earth {
+  display: none;
+  position: absolute;
+  left: 72px;
+  bottom: 92px;
+  z-index: 1;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   width: calc(100% - 144px);
 }
 
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.header > .wrapper {
   align-items: center;
+  height: 48px;
   margin: 24px 32px 0 64px;
 }
 
 .logo {
-  height: 11px;
+  position: absolute;
+  top: -48px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  margin: 0;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.2em;
 }
 
 .connect-button {
+  position: absolute;
+  top: -48px;
+  right: 0;
   width: 156px;
   height: 48px;
   border-radius: 24px;
@@ -110,7 +152,14 @@ body {
   margin: 80px calc(25vw - 225px) 0 100px;
 }
 
+.main-block > .wrapper {
+  width: 550px;
+  height: 100px;
+}
+
 .main-title {
+  position: absolute;
+  top: 100px;
   margin: 0;
   font-size: 100px;
   line-height: 92px;
@@ -135,23 +184,23 @@ body {
     font-size: 70px;
   }
 
-  .form {
-    margin: 0;
-  }
-
 }
 
 .main-text {
+  position: absolute;
+  top: 100px;
   font-weight: 400;
 }
 
 .form {
+  position: absolute;
+  top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 512px;
   height: 96px;
-  margin: 40px 0;
+  margin: 0;
   background-color: var(--light-black);
   border-radius: 48px;
 }
@@ -191,6 +240,7 @@ body {
 }
 
 .nft {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -198,11 +248,88 @@ body {
   width: 304px;
   height: 444px;
   padding: 16px 16px 24px;
-  border: 1px solid var(--dark-grey);
-  border-radius: 16px;
+}
+
+.corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+}
+
+.corner.lt {
+  top: 0;
+  left: 0;
+  border-top-left-radius: 16px;
+}
+
+.corner.rt {
+  top: 0;
+  right: 0px;
+  border-top-right-radius: 16px;
+}
+
+.corner.lb {
+  bottom: 0;
+  left: 0;
+  border-bottom-left-radius: 16px;
+}
+
+.corner.rb {
+  bottom: 0;
+  right: 0;
+  border-bottom-right-radius: 16px;
+}
+
+.border {
+  position: absolute;
+}
+
+.border.t {
+  top: 0;
+  border-top: 1px solid var(--dark-grey);
+}
+
+.border.b {
+  bottom: 0;
+  right: 16px;
+  border-bottom: 1px solid var(--dark-grey);
+}
+
+.border.l {
+  left: 0;
+  bottom: 16px;
+  height: 0;
+  border-left: 1px solid var(--dark-grey);
+}
+
+.border.r {
+  top: 16px;
+  right: 0;
+  border-right: 1px solid var(--dark-grey);
+}
+
+.wrapper > .border.t {
+  left: 16px;
+}
+
+.wrapper > .border.b 
+{
+  right: 16px;
+}
+
+/* .wrapper > .border.l,
+.wrapper > .border.r {
+  top: 16px;
+} */
+
+.nft > .wrapper {
+  width: 272px;
+  height: 299px;
 }
 
 .member {
+  position: absolute;
+  top: 270px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -213,8 +340,6 @@ body {
   line-height: 130%;
   text-align: center;
   letter-spacing: 0.01em;
-  border: 1px solid var(--dark-grey);
-  border-radius: 16px;
 }
 
 .member-main-title {
@@ -231,8 +356,24 @@ body {
   font-style: italic;
 }
 
+.nft-name-wrapper > .wrapper {
+  width: 130px;
+  height: 19px;
+}
+
+.nft-name,
+.nft-domain {
+  position: absolute;
+  top: 270px;
+}
+
 .nft-name {
+  left: 0;
   color: var(--grey);
+}
+
+.nft-domain {
+  left: 76px;
 }
 
 .etherium {
@@ -241,32 +382,83 @@ body {
   gap: 8px;
 }
 
+.etherium > .wrapper {
+  width: 50px;
+  height: 23px;
+}
+
+.etherium-quantity,
+.etherium-image {
+  position: absolute;
+  top: 270px;
+}
+
+.etherium-quantity {
+  left: 0;
+  display: inline-flex;
+  height: 23px;
+  align-items: center;
+}
+
+.etherium-image {
+  left: 18px;
+}
+
 .footer {
   position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   min-height: 120px;
-  margin: 40px 64px 0;
-  border-top: 1px solid var(--grey);
+  margin: 100px 64px 0;
+}
+
+.footer-wrapper {
+  flex-direction: row;
+  height: 40px;
+  margin: 39px 64px;
+}
+
+.footer-border {
+  width: 0;
+  height: 2px;
+  background-color: var(--white);
 }
 
 .links {
+  position: absolute;
+  top: 40px;
   display: flex;
   flex-direction: row;
   gap: 16px;
 }
 
+.links a {
+  height: 40px;
+}
+
 .year,
 .design {
-  height: 16px;
+  position: absolute;
+  top: 40px;
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
   margin: 0;
   font-weight: 400;
 }
 
-.earth {
-  position: absolute;
-  left: -128px;
-  bottom: 92px;
+.year {
+  left: calc(50% - 24px);
+}
+
+.design {
+  right: 0;
+}
+
+@media (max-width: 900px) {
+
+  .footer-wrapper {
+    margin: 39px 0;
+  }
+
 }

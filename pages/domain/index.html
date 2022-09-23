@@ -9,53 +9,92 @@
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,600&f[]=general-sans@300,700&display=swap" rel="stylesheet">
 </head>
 <body class="body">
-  <aside class="to-main">
-    <div class="to-main-wrapper">
-      <span class="to-main-title">main</span>
-      <button class="to-main-button">↓</button>
-    </div>
-  </aside>
+  <img src="../../assets/earth.svg" alt="earth" class="earth">
+  <div class="aside-wrapper wrapper">
+    <aside class="to-main">
+      <div class="to-main-wrapper wrapper">
+        <span class="to-main-title">main</span>
+        <button class="to-main-button">↓</button>
+      </div>
+      <img src="../../assets/earth.svg" alt="earth" class="earth">
+    </aside>
+  </div>
   <main class="main">
     <header class="header">
-      <p class="logo">INSULINE</p>
-      <button class="connect-button"><a href="#">Connect wallet</a></button>
+      <div class="wrapper">
+        <p class="logo">INSULINE</p>
+        <button class="connect-button"><a href="#">Connect wallet</a></button>
+      </div>
     </header>
     <section class="main-page">
       <div class="main-block">
-        <h1 class="main-title">Do you want<br>.insuline ENS</h1>
-        <p class="main-text">ENS helps you translate complex identifiers in Web3 into readable<br>
-          names, which are then registered in the Ethereum blockchain.</p>
-        <form class="form">
-          <input type="text" class="name-input" placeholder="Enter your name"/>
-          <span class="name-input-text">.insuline</span>
-          <button class="name-input-button" disabled>MINT</button>
-        </form>
+        <div class="wrapper">
+          <h1 class="main-title">Do you want</h1>
+        </div>
+        <div class="wrapper">
+          <h1 class="main-title">.insuline ENS</h1>
+        </div>
+        <div class="wrapper">
+          <p class="main-text">ENS helps you translate complex identifiers in Web3 into readable<br>
+            names, which are then registered in the Ethereum blockchain.</p>
+        </div>
+        <div class="wrapper">
+          <form class="form">
+            <input type="text" class="name-input" placeholder="Enter your name"/>
+            <span class="name-input-text">.insuline</span>
+            <button class="name-input-button" disabled>MINT</button>
+          </form>
+        </div>
       </div>
       <div class="nft">
-        <div class="member">
-          <span class="member-main-title">INSULINE</span>
-          <span class="member-text">CRYPTO<br>COMMUNITY<br>MEMBER<br></span>
-          <span class="member-name">YOUR NAME</span>
+        <div class="corner lt"></div>
+        <div class="corner rt"></div>
+        <div class="corner lb"></div>
+        <div class="corner rb"></div>
+        <div class="border l"></div>
+        <div class="border r"></div>
+        <div class="border t"></div>
+        <div class="border b"></div>
+        <div class="wrapper">
+          <div class="corner lt"></div>
+          <div class="corner rt"></div>
+          <div class="corner lb"></div>
+          <div class="corner rb"></div>
+          <div class="border l"></div>
+          <div class="border r"></div>
+          <div class="border t"></div>
+          <div class="border b"></div>
+          <div class="member">
+            <span class="member-main-title">INSULINE</span>
+            <span class="member-text">CRYPTO<br>COMMUNITY<br>MEMBER<br></span>
+            <span class="member-name">YOUR NAME</span>
+          </div>
         </div>
         <div class="nft-name-wrapper">
-          <span class="nft-name">Your name</span>
-          <span class="nft-domain">.insuline</span>
+          <div class="wrapper">
+            <span class="nft-name">Your name</span>
+            <span class="nft-domain">.insuline</span>
+          </div>
         </div>
         <div class="etherium">
-          <span class="etherium-quantity">5</span>
-          <img src="../../assets/ethereum.svg" alt="ethereum">
+          <div class="wrapper">
+            <span class="etherium-quantity">5</span>
+            <img class="etherium-image" src="../../assets/ethereum.svg" alt="ethereum">
+          </div>
         </div>
       </div>
     </section>
     <footer class="footer">
-      <img src="../../assets/earth.svg" alt="earth" class="earth">
-      <div class="links">
-        <a href="#" class="telegram-link"><img src="../../assets/telegram.svg" alt=""></a>
-        <a href="#" class="github-link"><img src="../../assets/github.svg" alt=""></a>
-        <a href="#" class="twitter-link"><img src="../../assets/twitter.svg" alt=""></a>
+      <div class="footer-border"></div>
+      <div class="footer-wrapper wrapper">
+        <div class="links">
+          <a href="#" class="telegram-link"><img src="../../assets/telegram.svg" alt=""></a>
+          <a href="#" class="github-link"><img src="../../assets/github.svg" alt=""></a>
+          <a href="#" class="twitter-link"><img src="../../assets/twitter.svg" alt=""></a>
+        </div>
+        <p class="year">©2022</p>
+        <p class="design">design by Artem Suslov</p>
       </div>
-      <p class="year">©2022</p>
-      <p class="design">design by Artem Suslov</p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="./index.js"></script>

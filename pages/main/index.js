@@ -7,11 +7,11 @@ function animateMainPage() {
   const hand = document.querySelector('.hand');
   const topTitle = document.querySelector('.main-title.first');
   const bottomTitle = document.querySelector('.main-title.second');
-  const logo = document.querySelector('.logo');
   const borders = document.querySelectorAll('.border');
+  const logo = document.querySelector('.logo');
+  const button = document.querySelector('.connect-button');
   const mediaLinks = document.querySelector('.links');
   const year = document.querySelector('.year');
-  const button = document.querySelector('.connect-button');
   const designText = document.querySelector('.design');
   const asideWrapper = document.querySelector('.body > .wrapper');
   const asideInsuline = document.querySelector('.to-domain-insuline-title');

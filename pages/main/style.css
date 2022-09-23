@@ -114,7 +114,6 @@ body {
 }
 
 .main-title {
-  position: absolute;
   margin: 0;
   font-size: 100px;
   line-height: 92px;
@@ -212,6 +211,7 @@ body {
 .design {
   right: 0;
 }
+
 .to-domain {
   position: absolute;
   top: 0;
