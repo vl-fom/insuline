@@ -119,6 +119,29 @@ body {
   width: 85px;
 }
 
+.hand:hover {
+  animation: 0.6s hand ease-in-out;
+  transform-origin: 90% 100%;
+}
+
+@keyframes hand {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
 .main-title {
   margin: 0;
   font-size: 100px;
