@@ -292,6 +292,7 @@ body {
 
 .to-domain:hover {
   background-color: var(--saturate-green2);
+  cursor: pointer;
 }
 
 .to-domain-wrapper {

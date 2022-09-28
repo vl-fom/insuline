@@ -72,6 +72,7 @@ body {
 
 .to-main:hover {
   background-color: var(--grey3);
+  cursor: pointer;
 }
 
 .to-main-wrapper {
