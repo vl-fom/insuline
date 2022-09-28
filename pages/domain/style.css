@@ -12,6 +12,7 @@
   --dark-grey: #272930;
   --grey: #424652;
   --grey2: #b9bdc5;
+  --grey3: #393c47;
   --light-grey: #e7e9ee;
 }
 
@@ -67,6 +68,10 @@ body {
   width: 150px;
   height: 100%;
   background-color: var(--light-black);
+}
+
+.to-main:hover {
+  background-color: var(--grey3);
 }
 
 .to-main-wrapper {
@@ -219,9 +224,13 @@ body {
 .name-input {
   width: 180px;
   padding: 0;
-  color: var(--grey);
   background-color: transparent;
   border: 0;
+}
+
+.name-input,
+.name-input::placeholder {
+  color: var(--grey);
 }
 
 .name-input-text {
@@ -420,13 +429,13 @@ body {
 .footer-wrapper {
   flex-direction: row;
   height: 40px;
-  margin: 39px 64px;
+  margin: 39px 64px 39px 0;
 }
 
 .footer-border {
   width: 0;
   height: 2px;
-  background-color: var(--white);
+  background-color: var(--grey3);
 }
 
 .links {
@@ -437,8 +446,40 @@ body {
   gap: 16px;
 }
 
-.links a {
+.telegram-link,
+.github-link,
+.twitter-link {
+  cursor: pointer;
+}
+
+.telegram-link {
+  width: 40px;
   height: 40px;
+  background-image: url("../../assets/telegram.svg");
+}
+
+.telegram-link:hover {
+  background-image: url("../../assets/telegram-light.svg");
+}
+
+.github-link {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../assets/github.svg");
+}
+
+.github-link:hover {
+  background-image: url("../../assets/github-light.svg");
+}
+
+.twitter-link {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../assets/twitter.svg");
+}
+
+.twitter-link:hover {
+  background-image: url("../../assets/twitter-light.svg");
 }
 
 .year,

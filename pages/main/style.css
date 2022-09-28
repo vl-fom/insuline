@@ -4,11 +4,13 @@
 
 :root {
   --green: #4acc67;
+  --saturate-green2: #36bf54;
   --light-green: #64d37c;
   --white: #ffffff;
   --black: #111318;
   --light-grey: #e7e9ee;
   --grey2: #b9bdc5;
+  --grey3: #393c47;
 }
 
 html {
@@ -58,7 +60,6 @@ body {
   display: inline-flex;
   flex-direction: column;
   width: 100%;
-  /* max-width: calc(100% - 144px); */
 }
 
 .header > .wrapper {
@@ -176,7 +177,7 @@ body {
 .border {
   width: 0;
   height: 2px;
-  background-color: var(--white);
+  background-color: var(--grey3);
 }
 
 .marquee-element {
@@ -196,6 +197,42 @@ body {
   top: 40px;
   display: flex;
   gap: 16px;
+}
+
+.telegram-link,
+.github-link,
+.twitter-link {
+  cursor: pointer;
+}
+
+.telegram-link {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../assets/telegram.svg");
+}
+
+.telegram-link:hover {
+  background-image: url("../../assets/telegram-light.svg");
+}
+
+.github-link {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../assets/github.svg");
+}
+
+.github-link:hover {
+  background-image: url("../../assets/github-light.svg");
+}
+
+.twitter-link {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../assets/twitter.svg");
+}
+
+.twitter-link:hover {
+  background-image: url("../../assets/twitter-light.svg");
 }
 
 .year,
@@ -228,6 +265,10 @@ body {
   width: 144px;
   height: 100%;
   background-color: var(--green);
+}
+
+.to-domain:hover {
+  background-color: var(--saturate-green2);
 }
 
 .to-domain-wrapper {
