@@ -13,11 +13,12 @@ function animateMainPage() {
   const mediaLinks = document.querySelector('.links');
   const year = document.querySelector('.year');
   const designText = document.querySelector('.design');
+  const asideBlock = document.querySelector('.to-domain');
   const asideWrapper = document.querySelector('.body > .wrapper');
   const asideInsuline = document.querySelector('.to-domain-insuline-title');
   const asideTitle = document.querySelector('.to-domain-title');
   const asideButton = document.querySelector('.to-domain-button');
-  asideButton.addEventListener('click', leavingFromMain);
+  asideBlock.addEventListener('click', leavingFromMain);
   TweenMax.staggerTo([hand, topTitle, bottomTitle], 0.5, {
     ease: 'power1.inOut',
     top: 0,
