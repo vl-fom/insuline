@@ -71,6 +71,7 @@ function leavingFromMain() {
   const asideInsuline = document.querySelector('.to-domain-insuline-title');
   const asideTitle = document.querySelector('.to-domain-title');
   const asideButton = document.querySelector('.to-domain-button');
+  aside.classList.add('opened');
   gsap.set(aside, {
     right: 0,
     zIndex: 1,

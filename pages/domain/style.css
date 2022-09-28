@@ -225,6 +225,7 @@ body {
 .name-input {
   width: 180px;
   padding: 0;
+  color: var(--white) !important;
   background-color: transparent;
   border: 0;
 }
@@ -331,15 +332,9 @@ body {
   left: 16px;
 }
 
-.wrapper > .border.b 
-{
+.wrapper > .border.b {
   right: 16px;
 }
-
-/* .wrapper > .border.l,
-.wrapper > .border.r {
-  top: 16px;
-} */
 
 .nft > .wrapper {
   width: 272px;

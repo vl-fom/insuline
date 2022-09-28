@@ -295,6 +295,10 @@ body {
   cursor: pointer;
 }
 
+.to-domain.opened:hover {
+  background-color: var(--green);
+}
+
 .to-domain-wrapper {
   display: flex;
   flex-direction: row;
