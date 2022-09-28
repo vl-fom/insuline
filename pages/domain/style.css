@@ -229,6 +229,10 @@ body {
   border: 0;
 }
 
+.name-input:focus-visible {
+  outline: none;
+}
+
 .name-input,
 .name-input::placeholder {
   color: var(--grey);
